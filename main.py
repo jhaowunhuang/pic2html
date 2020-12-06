@@ -8,8 +8,8 @@ def rgb2hex(rgb_arr):
 def pic2html(input_image, output_html):
     img = cv2.imread(input_image)
     h, w, _ = img.shape
-    h //= 50
-    w //= 50
+    h //= 20
+    w //= 20
     print(h, w)
     img = cv2.resize(img, (h, w), interpolation = cv2.INTER_AREA) 
     cvt_img = map(lambda arr: map(rgb2hex, arr), img)
